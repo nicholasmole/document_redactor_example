@@ -1,0 +1,10 @@
+{
+  "name": "cia_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "nicholasmole <nmole065@g.rwu.edu>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^9.0.0"
+  }
+}
