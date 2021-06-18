@@ -1,4 +1,4 @@
-var DoumentRedactor = require('./src/DocumentRedactor');
+var DocumentRedactor = require('./src/DocumentRedactor');
 
 const given_arguments = {
   keywords: null,
@@ -16,11 +16,11 @@ process.argv.forEach(function (val) {
 });
 
 if (given_arguments.keywords && given_arguments.document) {
-  console.log(DoumentRedactor(
+  console.log(DocumentRedactor(
     given_arguments.keywords,
     given_arguments.document, 
     given_arguments.seperator)
   );
 }
 
-module.exports = DoumentRedactor;
+module.exports = DocumentRedactor;
