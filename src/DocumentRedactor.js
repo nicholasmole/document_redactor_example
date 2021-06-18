@@ -3,10 +3,9 @@
  * Redact keywords from given document text
  * @param  {string} keywords - keywords that will be redacted from document
  * @param  {string} document - text that needs to be redacted
- * @param  {string} seperator - key value that tells the module how to distiguish between keyword
  * @return {string} - modified document with keywords in document replaced by "XXXX"
  */
-module.exports = function DocumentRedactor(keywords = "", document = "", seperator = " ") {
+module.exports = function DocumentRedactor(keywords = "", document = "") {
 
   const SINGLE_QUOTES_REPLACEMENT = "SINGLE_QUOTES_REPLACEMENT";
   const DOUBLE_QUOTES_REPLACEMENT = "DOUBLE_QUOTES_REPLACEMENT";

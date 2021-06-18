@@ -27,14 +27,11 @@ The follow parameters can be used as input for the `DocumentRedactor`.
 ```
  * @param  {string} keywords - keywords that will be redacted from document
  * @param  {string} document - text that needs to be redacted
- * @param  {string} seperator - key value that tells the module how to distiguish between keyword
 ```
-
-If the seperator is not provided the keywords will be seperated by a white spaces.
 
 If you are running the module in node cli you supply the variables
 ```
-node . keywords="hi,bye" seperator="," document="hi and goodbye"
+node . keywords="hi,bye" document="hi and goodbye"
 ```
 
 
@@ -49,10 +46,10 @@ This application is not case senitive. So if you provide the word "bye", both "b
 This application is built so you can either import the library or run
 it with in node cli.
 
-If you would like to run the module using node, open up the unix terminal and provided the keywords, document. (seperator is optional: defaults to " ")
+If you would like to run the module using node, open up the unix terminal and provided the keywords, document.
 
 ```
->>node . keywords="cheese,bread,cake" document="I love to eat cheese, bread, and cake" seperator=","
+>>node . keywords="cheese,bread,cake" document="I love to eat cheese, bread, and cake"
 
 I love to eat XXXX, XXXX, and XXXX
 ```
