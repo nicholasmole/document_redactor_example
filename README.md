@@ -34,6 +34,22 @@ If you are running the module in node cli you supply the variables
 node . keywords="hi,bye" document="hi and goodbye"
 ```
 
+## In depth understading of how 'keywords' parameter in handled
+
+This is a brief explanation of how the 'keywords' parameter is seperated from a single string input to keywords and phrases.
+
+The keywords parameter goes through several changes in order to capture all possible alternative separators.
+
+First the module will try to capture all spaces, and commas outside of quotes, and transform these into pipes.
+Second, and third the module will replace all quotes with other quotes to a "key" value.
+Fourth the module will transform all the remaining quotes to pipes.
+Fifth, and sixth the module will transform all single and double quotes that were transformed into "key" values, back into single and double quotes. 
+Seventh the module will trim any excess spaces.
+Eighth the module will remove leading and ending pipes (removing an issue where this pipes would capture all spaces in the find and replace.)
+Finally, the keywords and phrases are all between word boundaries to make sure partial matches are not replaced. 
+
+
+
 
 ## Usage
 ---
