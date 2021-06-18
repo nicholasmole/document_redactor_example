@@ -11,7 +11,7 @@ module.exports = function DocumentRedactor(keywords = "", document = "") {
   const DOUBLE_QUOTES_REPLACEMENT = "DOUBLE_QUOTES_REPLACEMENT";
   const REGEX_GET_SINGLE_QUOTES = new RegExp(/\'(?=[^"]*"[^"]*(?:"[^"]*"[^"]*)*$)/,"gi");
   const REGEX_GET_DOUBLE_QUOTES = new RegExp(/\"(?=[^']*'[^']*(?:'[^']*'[^']*)*$)/,"gi");
-  const REGEX_GET_SPACES_AND_COMMAS_OUTSIDE_OF_QUOTES = new RegExp(/(\s+|,)(?=(?:[^("|')]|("|')[^("|')]*("|'))*$)/, "gi");
+  const REGEX_GET_SPACES_AND_COMMAS_OUTSIDE_OF_QUOTES = new RegExp(/(\s+|,)(?=(?:[^(")]|(")[^(")]*("))*$)(?=(?:[^(')]|(')[^(')]*('))*$)/, "g");
   const REGEX_ALL_QUOTES = new RegExp(/('|")(?:\|)|(?:\|*)('|")/,"g");
   const REGEX_CHECK_FOR_LEADING_OR_ENDING_PIPES = new RegExp(/^\||(\|)$/,"g");
 
